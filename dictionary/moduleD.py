@@ -16,7 +16,7 @@ def Delete_word():
     d.pop(a)
     print(d)
     
-def ShowDict():
+def Show_dict():
     for i in d:
         print(i)
 
