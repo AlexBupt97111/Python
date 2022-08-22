@@ -14,7 +14,9 @@ while True:
     elif x == 2:
         ModuleD.Add_word()             
     elif x == 3:
-        ModuleD.Delete_word()   
+        ModuleD.Delete_word()
+    elif x == 4:
+        ModuleD.Show_dict()
     elif x == 0:
         print("Finish work")
         break
