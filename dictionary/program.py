@@ -6,6 +6,7 @@ while True:
               1 - Translate word;
               2 - Add word;
               3 - Delete word;
+              4 - Show dict;
               0 - Finish work:
 """))
 
