@@ -29,9 +29,9 @@ good_1 = create_good("Chocolate", 218)
 good_2 = create_good("Coffe", 512)
 good_3 = create_good("Hamon", 2175)
 good_4 = create_good("Bread", 31)
-good_5 = create_good("Green tea", 82) #5 times: 5 goods need
+good_5 = create_good("Green tea", 82)
 
-list_of_goods = [good_1, good_2, good_3,good_4,good_5]#lst
+list_of_goods = [good_1, good_2, good_3,good_4,good_5]
 sk = {
   500:5,
   1000:7,
