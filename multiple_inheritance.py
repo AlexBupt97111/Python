@@ -20,7 +20,7 @@ class Pos:
         print("Constructor Pos")
         super().__init__() #use super - no matter which order
 
-class Line(Pos,Styles): #change places of classes  - and norm (adapted)
+class Line(Pos, Styles): #change places of classes  - and norm (adapted)
     def __init__(self, sp:Point, ep:Point,color = "red", width = 1): #write args here
         self._sp = sp
         self._ep = ep
@@ -31,6 +31,6 @@ class Line(Pos,Styles): #change places of classes  - and norm (adapted)
     def draw(self):
         print(f"Painting of line: {self._sp}, {self._ep}, {self._color}, {self._width}")
 
-l = Line(Point(10,10), Point(100,100), "green", 5)
+l = Line(Point(10, 10), Point(100, 100), "green", 5)
 l.draw() #call method of class Line
 print(Line.__mro__)
