@@ -4,8 +4,7 @@ N, M = (5, 10) # N - size of field(5x5), M - count  of mines
 
 def createGame(PM): 
     rng = random.Random() 
-    
-   
+  
     n = M 
     while n > 0: 
         i = rng.randrange(N) 
@@ -14,14 +13,12 @@ def createGame(PM):
             continue
         PM[i * N + j] = -1
         n -= 1 
-
-    
+        
     for i in range(N):
         for j in range(N):
             if PM[i * N + j] == 0:
                 PM[i * N + j] = getTotalMines(PM, i, j)
                                                
-
 def getTotalMines(PM, i, j):
     n = 0 
     for k in range(-1, 2):
@@ -58,17 +55,16 @@ def goPlayer():
         flLoopInput = False 
     return (x, y)
         
-
 def isFinish(PM,P):
     for i in range(N * N):
-        if P[i] != -2 and PM[i] < 0: return -1 #you on mine (-1); game over
+        if P[i] != -2 and PM[i] < 0: 
+            return -1 #you on mine (-1); game over
     for i in range(N * N):
-        if P[i] == -2 and PM[i] >= 0: return 1 #cell is closen and see mine around - go (1)
+        if P[i] == -2 and PM[i] >= 0: 
+            return 1 #cell is closen and see mine around - go (1)
         
     return -2 #you win (all is open without mines)
-            
-        
-      
+                  
 def startGame():
     P = [-2] * N * N 
     PM = [0] * N * N 
