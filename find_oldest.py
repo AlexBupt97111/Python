@@ -6,7 +6,7 @@ for i in range(5):
            "age": random.randint(1, 15) 
           }
     cats.append(cat) 
-print(cats)
+#print(cats)
 
 max_cat = cats[0] 
 for cat in cats:
