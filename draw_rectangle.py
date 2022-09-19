@@ -1,13 +1,14 @@
-def rectangle(a,b): 
+def rectangle(length, width): 
     i = 1 
     j = 1 
-    while i <= a:
+    while i <= length:
         j = 1 
-        while j <= b: 
+        while j <= width: 
             print("*", end = '') 
             j = j + 1 
         print() 
         i = i + 1    
-a = int(input("Input number for height: "))
-b = int(input("Input number for width: "))        
-rectangle(a,b)
+length = int(input("Input number for height: "))
+width = int(input("Input number for width: "))  
+
+rectangle(length, width)
