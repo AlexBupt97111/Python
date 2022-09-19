@@ -82,7 +82,7 @@ def createGame():
         if symb=="0": 
             count-=1                    
             x, y = goComp(comp)
-            win += ifFinish(x,y,symb=comp)        
+            win += ifFinish(x, y, symb = comp)        
             
             if win == False and count>0:
                 count -= 1
