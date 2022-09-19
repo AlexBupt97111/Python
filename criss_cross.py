@@ -61,7 +61,7 @@ def ifFinish(x, y, symb):
         return 0
     
 def createGame():   
-    symb = input("Choose symbol + або 0 (zero): ") 
+    symb = input("Choose symbol + or 0 (zero): ") 
     comp = "+" if symb =="0" else "0"
 
     win = False
