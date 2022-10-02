@@ -1,4 +1,5 @@
 d = {"car":"авто", "house":"дім", "road":"дорога","language":"мова"}
+
 def Translate_word():
     a = input("Input word by English to translate: ")
     a = d.get(a) #to translate (get value by key)
