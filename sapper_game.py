@@ -40,7 +40,7 @@ def show(field):
 def goPlayer():
     flLoopInput = True
     while flLoopInput:
-        x, y = input("Input coordinates by gape: ").split() #input int coordinate
+        x, y = input("Input coordinates (x, y) by gape: ").split() #input int coordinate
         if not x.isdigit() or not y.isdigit():
             print("Incorrent data")
             continue
