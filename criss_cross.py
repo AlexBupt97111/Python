@@ -20,7 +20,7 @@ def goPlayer(symb):
     gou = "" 
     while gou != "go":
     
-        (in_line, in_column) = input("Enter the coordinates (x, y), (example: 1 3): ")): ").replace(",", " ").split()
+        (in_line, in_column) = input("Enter the coordinates (x, y), (example: 1 3): ").replace(",", " ").split()
         x, y = int(in_line)-1, int(in_column)-1 
         
         if x not in range(0,3) or y not in range(0,3):
