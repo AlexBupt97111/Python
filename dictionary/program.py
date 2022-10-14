@@ -1,7 +1,6 @@
 import ModuleD
 
 while True:
-    
     x = int(input("""Input certain number for certain action:
               1 - Translate word;
               2 - Add word;
