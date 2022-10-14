@@ -23,7 +23,7 @@ def goPlayer(symb):
             (in_line, in_column) = input("Enter line(x) and column(y). Example(1 3): ").replace(",", " ").split()
             x, y = int(in_line) - 1, int(in_column) - 1 
             if x not in range(0, 3) or y not in range(0, 3):
-               print("\n Uncorrect coordinates \n")
+               print("\n Uncorrect coordinates. Use integer numbers in range 1-3 \n")
             else:    
                 if Field[x][y] == "_":
                     Field[x][y] = symb  
