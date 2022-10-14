@@ -19,23 +19,24 @@ def show_field(Field):
 def goPlayer(symb):
     gou = "" 
     while gou != "go":
-    
-        (in_line, in_column) = input("Enter line(x) and column(y). Example(1 3): ").replace(",", " ").split()
-        x, y = int(in_line) - 1, int(in_column) - 1 
-        
-        if x not in range(0, 3) or y not in range(0, 3):
-            print("\n Uncorrect coordinates \n")
-        else:    
-            if Field[x][y] == "_":
-                Field[x][y] = symb  
+        try:
+            (in_line, in_column) = input("Enter line(x) and column(y). Example(1 3): ").replace(",", " ").split()
+            x, y = int(in_line) - 1, int(in_column) - 1 
+            if x not in range(0, 3) or y not in range(0, 3):
+               print("\n Uncorrect coordinates \n")
+            else:    
+                if Field[x][y] == "_":
+                    Field[x][y] = symb  
                 
-                gou = "go"
-                show_field(Field)
-                print()
-                return x, y 
+                    gou = "go"
+                    show_field(Field)
+                    print()
+                    return x, y 
                                
-            else:
-                print("\n This cell is fill! \n")
+                else:
+                    print("\n This cell is fill! \n")
+        except ValueError:
+            print("Enter two values.  Example: 1 2")
     
 def goComp(symb): #condition for computer
     rng = random.Random()
