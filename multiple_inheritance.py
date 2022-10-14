@@ -23,18 +23,18 @@ class CPU(AMD, Intel):
     def __init__(self):
         super().__init__()
 
-    def setProcessor(self, processor: str, cpuCores: int = None, cpuFrequency: float = None):#setter
+    def setProcessor(self, processor: str, cpuCores: int = None, cpuFrequency: float = None): #setter
         if cpuCores is None and cpuFrequency is None:
             self._processor = processor
         else:
             self._processor = processor
             self._cpuCores = cpuCores
-            self._cpuFrequency = cpuFrequency#use setter
+            self._cpuFrequency = cpuFrequency #use setter
         
 class GPU (NVidia, GeForce):
     print("Constructor GPU")
     def __init__(self):
-        super().__init__()# if use super().
+        super().__init__() # if use super().
 
     def setVideoCard(self, videoCard: str, gpuCores: int = None, gpuMemory: int = None):
         if gpuCores is None and gpuMemory is None:
@@ -43,18 +43,19 @@ class GPU (NVidia, GeForce):
             self._videoCard = videoCard
             self._gpuCores = gpuCores
             self._gpuMemory = gpuMemory
+            
 class Memory:
     def __init__(self):
         print("Constructor Memory")
         super().__init__()
 
-def setMemory(self, memoryVolume: int, memoryFrequency: int):#setter
+    def setMemory(self, memoryVolume: int, memoryFrequency: int): #setter
         self._memoryVolume = memoryVolume
         self._memoryFrequency = memoryFrequency
 
 
 class Motherboard(CPU,GPU,Memory):
-    def __init__(self,processor: str, cpuCores: int, cpuFrequency: float, \
+    def __init__(self, processor: str, cpuCores: int, cpuFrequency: float, \
                  videoCard: str, gpuCores: int, gpuMemory: int, \
                  memoryVolume: int, memoryFrequency: int):
         self._processor = processor
