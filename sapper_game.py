@@ -1,6 +1,6 @@
 import random 
 
-N, M = (5, 10) # N - size of field(5x5), M - count  of mines
+N, M = (5, 10) #N - size of field(5x5), M - count  of mines
 
 def createGame(PM): 
     rng = random.Random() 
