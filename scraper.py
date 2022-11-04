@@ -19,10 +19,11 @@ def news_from_site(url):
     bs = get_page(url)
     if bs is None:
         return bs
-    title = bs.find("h1", {"class": "article-title"}).text 
-    lines = bs.find_all("p") 
-    body = "\n".join([line.text for line in lines]) 
-    return Content(url, title, body) 
+    else:
+        title = bs.find("h1", {"class": "article-title"}).text 
+        lines = bs.find_all("p") 
+        body = "\n".join([line.text for line in lines]) 
+        return Content(url, title, body) 
 
 content = news_from_site("https://bzh.life/ua/mesta-i-veshi/ukrzalizniczya-vidkrila-kramnichku-z-merchem-na-vokzali-u-kievi/")
 if content is None:
